@@ -17,12 +17,14 @@ struct PlatView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 64, height: 64)
                 .cornerRadius(10)
-            VStack(alignment: .leading){
+            VStack(alignment: .leading,spacing:5){
                 Text("Asian Flank Steak")
-                    .font(.system(size: 24))
-                Text("Prix")
-                    .font(.system(size: 16))
+                    .font(.system(size: 24,weight:.medium))
+                Text("8.99")
+                    .font(.system(size: 16 ,weight:.bold))
+                    .foregroundColor(Color(.systemGray))
             }
+            .padding(.horizontal)
             
             Spacer()
         }
