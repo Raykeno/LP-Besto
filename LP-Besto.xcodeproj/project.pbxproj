@@ -11,6 +11,8 @@
 		724BEF5528EB18A10035CDEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF5428EB18A10035CDEC /* ContentView.swift */; };
 		724BEF5728EB18A20035CDEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 724BEF5628EB18A20035CDEC /* Assets.xcassets */; };
 		724BEF5A28EB18A20035CDEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 724BEF5928EB18A20035CDEC /* Preview Assets.xcassets */; };
+		724BEF6428EB1C960035CDEC /* PlatAddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6328EB1C960035CDEC /* PlatAddOrderView.swift */; };
+		724BEF6628EB1CA40035CDEC /* Plat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6528EB1CA40035CDEC /* Plat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		724BEF5428EB18A10035CDEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		724BEF5628EB18A20035CDEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		724BEF5928EB18A20035CDEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		724BEF6328EB1C960035CDEC /* PlatAddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatAddOrderView.swift; sourceTree = "<group>"; };
+		724BEF6528EB1CA40035CDEC /* Plat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,9 @@
 		724BEF5128EB18A10035CDEC /* LP-Besto */ = {
 			isa = PBXGroup;
 			children = (
+				724BEF6228EB1C460035CDEC /* ViewModel */,
+				724BEF6128EB1C400035CDEC /* Model */,
+				724BEF6028EB1C380035CDEC /* View */,
 				724BEF5228EB18A10035CDEC /* LP_BestoApp.swift */,
 				724BEF5428EB18A10035CDEC /* ContentView.swift */,
 				724BEF5628EB18A20035CDEC /* Assets.xcassets */,
@@ -65,6 +72,29 @@
 				724BEF5928EB18A20035CDEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		724BEF6028EB1C380035CDEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				724BEF6328EB1C960035CDEC /* PlatAddOrderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		724BEF6128EB1C400035CDEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				724BEF6528EB1CA40035CDEC /* Plat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		724BEF6228EB1C460035CDEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724BEF6428EB1C960035CDEC /* PlatAddOrderView.swift in Sources */,
 				724BEF5528EB18A10035CDEC /* ContentView.swift in Sources */,
+				724BEF6628EB1CA40035CDEC /* Plat.swift in Sources */,
 				724BEF5328EB18A10035CDEC /* LP_BestoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
