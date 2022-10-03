@@ -59,7 +59,6 @@
 		724BEF5128EB18A10035CDEC /* LP-Besto */ = {
 			isa = PBXGroup;
 			children = (
-				D45ACF0C28EB27240000B939 /* ViewModel */,
 				724BEF6128EB1C400035CDEC /* Model */,
 				724BEF6028EB1C380035CDEC /* View */,
 				724BEF5228EB18A10035CDEC /* LP_BestoApp.swift */,
@@ -94,13 +93,6 @@
 				724BEF6528EB1CA40035CDEC /* Plat.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D45ACF0C28EB27240000B939 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
