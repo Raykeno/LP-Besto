@@ -13,6 +13,7 @@
 		724BEF5A28EB18A20035CDEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 724BEF5928EB18A20035CDEC /* Preview Assets.xcassets */; };
 		724BEF6428EB1C960035CDEC /* PlatAddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6328EB1C960035CDEC /* PlatAddOrderView.swift */; };
 		724BEF6628EB1CA40035CDEC /* Plat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6528EB1CA40035CDEC /* Plat.swift */; };
+		724BEF6B28EB29A50035CDEC /* PlatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6A28EB29A50035CDEC /* PlatViewModel.swift */; };
 		D45ACF0E28EB27A00000B939 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45ACF0D28EB27A00000B939 /* ListView.swift */; };
 		D45ACF1028EB27C00000B939 /* PlatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45ACF0F28EB27C00000B939 /* PlatView.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		724BEF5928EB18A20035CDEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		724BEF6328EB1C960035CDEC /* PlatAddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatAddOrderView.swift; sourceTree = "<group>"; };
 		724BEF6528EB1CA40035CDEC /* Plat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plat.swift; sourceTree = "<group>"; };
+		724BEF6A28EB29A50035CDEC /* PlatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatViewModel.swift; sourceTree = "<group>"; };
 		D45ACF0D28EB27A00000B939 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D45ACF0F28EB27C00000B939 /* PlatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 		724BEF5128EB18A10035CDEC /* LP-Besto */ = {
 			isa = PBXGroup;
 			children = (
+				724BEF6928EB296E0035CDEC /* ViewModel */,
 				724BEF6128EB1C400035CDEC /* Model */,
 				724BEF6028EB1C380035CDEC /* View */,
 				724BEF5228EB18A10035CDEC /* LP_BestoApp.swift */,
@@ -93,6 +96,14 @@
 				724BEF6528EB1CA40035CDEC /* Plat.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		724BEF6928EB296E0035CDEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				724BEF6A28EB29A50035CDEC /* PlatViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				724BEF6628EB1CA40035CDEC /* Plat.swift in Sources */,
 				724BEF5328EB18A10035CDEC /* LP_BestoApp.swift in Sources */,
 				D45ACF1028EB27C00000B939 /* PlatView.swift in Sources */,
+				724BEF6B28EB29A50035CDEC /* PlatViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
