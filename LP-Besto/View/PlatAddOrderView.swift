@@ -51,14 +51,14 @@ struct PlatAddOrderView: View {
             Button {
                 
             } label: {
-                Text("Commander le Plat - prix")
-                    .frame(height: 100)
+                Text("Commander le Plat - \(plat.prix, specifier: "%.2f")€")
+                    .frame(height: 48)
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.white)
                     .background(Color.accentColor)
                     .font(.headline)
                     .cornerRadius(10)
-            }
+            }.padding()
         }
         .navigationTitle(" 🫕 Commande du Plat")
     }
