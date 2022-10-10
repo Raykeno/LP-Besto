@@ -32,15 +32,6 @@ struct PlatView: View {
             .padding(.horizontal)
             
             Spacer()
-            
-            Button{
-                //action
-                
-            } label: {
-                //design
-                Text(">")
-                    .foregroundColor(Color(.systemGray2))
-            }
         }
         .padding(.vertical, 10)
         .font(.title2)

@@ -66,8 +66,7 @@ struct PlatAddOrderView: View {
 
 struct PlatAddOrderView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            PlatAddOrderView(plat: Plat.mockData[0])
-        }
+        PlatAddOrderView(plat: Plat.mockData[0])
+            .environmentObject(PlatViewModel())
     }
 }

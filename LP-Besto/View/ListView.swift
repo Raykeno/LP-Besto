@@ -22,9 +22,11 @@ struct ListView: View {
             
             List{
                 ForEach(platVM.plats){
-                    plat in PlatView(plat: plat)
-                }
-                .onTapGesture {
+                    plat in
+                    //test pour aller vers une autre vue
+                    NavigationLink(destination: PlatAddOrderView(plat:plat)){
+                        PlatView(plat:plat)
+                    }
                     
                 }
             }
