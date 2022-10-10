@@ -31,13 +31,13 @@ struct AccountView: View {
                     }
                            .pickerStyle(.segmented)
                    // test pour la recuperation
-                    Text("Your gender: \(selection)")
+                    Text("Your gender : \(selection)")
                     TextField("First Name", text: $firstName)
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
                     DatePicker("Birthday", selection: $birthDate, displayedComponents: .date)
                     Button {
-                        print("saved")
+                        print("all changes saved")
                     } label: {
                         Text("Save changes")
                             .foregroundColor(.green)
