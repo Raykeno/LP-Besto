@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OurTabView: View {
+struct OurTabItemView: View {
     var body: some View {
              TabView{
                  ListView()
@@ -20,14 +20,17 @@ struct OurTabView: View {
                          Image(systemName: "person")
                          Text("Account")
                      }
-                 
+                 AccountView()
+                     .tabItem {
+                         Image(systemName: "bag")
+                         Text("Order")
+                     }
              }
     }
 }
 
-struct OurTabView_Previews: PreviewProvider {
+struct OurTabItemView_Previews: PreviewProvider {
     static var previews: some View {
-        OurTabView()
+        OurTabItemView()
     }
 }
-

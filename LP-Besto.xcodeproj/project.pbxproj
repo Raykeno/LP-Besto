@@ -14,8 +14,8 @@
 		724BEF6428EB1C960035CDEC /* PlatAddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6328EB1C960035CDEC /* PlatAddOrderView.swift */; };
 		724BEF6628EB1CA40035CDEC /* Plat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6528EB1CA40035CDEC /* Plat.swift */; };
 		724BEF6B28EB29A50035CDEC /* PlatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF6A28EB29A50035CDEC /* PlatViewModel.swift */; };
+		7E0E35F428F45112003B7F46 /* OurTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E35F328F45112003B7F46 /* OurTabItemView.swift */; };
 		7E95CB4728EB2C0200F610E1 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95CB4628EB2C0200F610E1 /* AccountView.swift */; };
-		7E95CB4B28EB2E8300F610E1 /* OurTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95CB4A28EB2E8300F610E1 /* OurTabView.swift */; };
 		D45ACF0E28EB27A00000B939 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45ACF0D28EB27A00000B939 /* ListView.swift */; };
 		D45ACF1028EB27C00000B939 /* PlatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45ACF0F28EB27C00000B939 /* PlatView.swift */; };
 /* End PBXBuildFile section */
@@ -29,8 +29,8 @@
 		724BEF6328EB1C960035CDEC /* PlatAddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatAddOrderView.swift; sourceTree = "<group>"; };
 		724BEF6528EB1CA40035CDEC /* Plat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plat.swift; sourceTree = "<group>"; };
 		724BEF6A28EB29A50035CDEC /* PlatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatViewModel.swift; sourceTree = "<group>"; };
+		7E0E35F328F45112003B7F46 /* OurTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurTabItemView.swift; sourceTree = "<group>"; };
 		7E95CB4628EB2C0200F610E1 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		7E95CB4A28EB2E8300F610E1 /* OurTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurTabView.swift; sourceTree = "<group>"; };
 		D45ACF0D28EB27A00000B939 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D45ACF0F28EB27C00000B939 /* PlatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +91,7 @@
 				D45ACF0D28EB27A00000B939 /* ListView.swift */,
 				D45ACF0F28EB27C00000B939 /* PlatView.swift */,
 				7E95CB4628EB2C0200F610E1 /* AccountView.swift */,
-				7E95CB4A28EB2E8300F610E1 /* OurTabView.swift */,
+				7E0E35F328F45112003B7F46 /* OurTabItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,12 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0E35F428F45112003B7F46 /* OurTabItemView.swift in Sources */,
 				724BEF6428EB1C960035CDEC /* PlatAddOrderView.swift in Sources */,
 				724BEF5528EB18A10035CDEC /* ContentView.swift in Sources */,
 				D45ACF0E28EB27A00000B939 /* ListView.swift in Sources */,
 				724BEF6628EB1CA40035CDEC /* Plat.swift in Sources */,
 				7E95CB4728EB2C0200F610E1 /* AccountView.swift in Sources */,
-				7E95CB4B28EB2E8300F610E1 /* OurTabView.swift in Sources */,
 				724BEF5328EB18A10035CDEC /* LP_BestoApp.swift in Sources */,
 				D45ACF1028EB27C00000B939 /* PlatView.swift in Sources */,
 				724BEF6B28EB29A50035CDEC /* PlatViewModel.swift in Sources */,
