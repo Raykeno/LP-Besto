@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AccountView: View {
-    
+    @State var selection: String = "male"
+    let genderOptions: [String] = ["male","female"]
     @State var firstName: String=""
     @State var lastName: String=""
     @State var email: String=""
@@ -17,15 +18,31 @@ struct AccountView: View {
     @State var togFrequent = false
     
     var body: some View {
-        
         NavigationView{
-            
             Form{
-                Section(header: Text("Personnal Info")){
+
+                Section(header: Text("Personal Info")){
+                    Picker(selection: $selection,
+                           label: Text("Gender")) {
+                        ForEach(genderOptions.indices) {
+                            index in Text(genderOptions[index])
+                                .tag(genderOptions[index])
+                        }
+                    }
+                           .pickerStyle(.segmented)
+                   // test pour la recuperation
+                    Text("Your gender: \(selection)")
                     TextField("First Name", text: $firstName)
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
                     DatePicker("Birthday", selection: $birthDate, displayedComponents: .date)
+                    Button {
+                        print("saved")
+                    } label: {
+                        Text("Save changes")
+                            .foregroundColor(.green)
+                    }
+
 
                 }
                 
@@ -33,28 +50,9 @@ struct AccountView: View {
                     Toggle("Extra Napkins", isOn: $togExtra)
                     Toggle("Frequent Reffils", isOn: $togFrequent)
                 }
-                
-           /*     TabView{
-                    AccountView()
-                        .tabItem {
-                            Image(systemName: "homekit")
-                            Text("Home")
-                        }
-                    AccountView()
-                        .tabItem {
-                            Image(systemName: "person")
-                            Text("Account")
-                        }
-                    AccountView()
-                        .tabItem {
-                            Image(systemName: "homekit")
-                            Text("home")
-                        }
-                }*/
-
     
             }
-            .navigationTitle("😎Account")
+            .navigationTitle("😎 Account")
             
         }
         
