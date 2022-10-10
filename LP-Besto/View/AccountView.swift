@@ -18,6 +18,7 @@ struct AccountView: View {
     @State var togFrequent = false
     
     var body: some View {
+        
         NavigationView{
             Form{
 
@@ -36,12 +37,10 @@ struct AccountView: View {
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
                     DatePicker("Birthday", selection: $birthDate, displayedComponents: .date)
-                    Button {
-                        print("all changes saved")
-                    } label: {
-                        Text("Save changes")
-                            .foregroundColor(.green)
+                    Button("Save changes") {
+                        print("changes saved")
                     }
+                    .disabled(firstName.isEmpty||lastName.isEmpty||email.isEmpty)
 
 
                 }
@@ -55,7 +54,6 @@ struct AccountView: View {
             .navigationTitle("😎 Account")
             
         }
-        
         
         
     }
