@@ -11,6 +11,9 @@ import SwiftUI
 //View pour Home
 
 struct ListView: View {
+    
+    @EnvironmentObject var platVM: PlatViewModel
+    
     var body: some View {
         
         NavigationView{
@@ -18,9 +21,12 @@ struct ListView: View {
             
             
             List{
-                PlatView()
-                PlatView()
-                PlatView()
+                ForEach(platVM.plats){
+                    plat in PlatView(plat: plat)
+                }
+                .onTapGesture {
+                    
+                }
             }
             .navigationTitle("🍟 Appetizers")
             .listStyle(PlainListStyle())
@@ -31,5 +37,6 @@ struct ListView: View {
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()
+            .environmentObject(PlatViewModel())
     }
 }
