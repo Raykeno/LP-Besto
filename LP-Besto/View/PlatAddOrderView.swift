@@ -9,30 +9,37 @@ import SwiftUI
 
 // View pour ajouter un plat dans la commande
 
+
+
 struct PlatAddOrderView: View {
+    
+    let plat : Plat
+    
+    @EnvironmentObject var platVM : PlatViewModel
+    
     var body: some View {
         VStack {
             Image("SteakTestExemple")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 250, height: 250)
-            Text("Nom du Plat")
+            Text(plat.name)
                 .font(.title)
             Spacer()
             HStack {
                 VStack {
-                    Text("⚡️ Calories : 2500") // Ne pas dépasser 4 chiffres!!
+                    Text("⚡️ Calories : \(plat.contenu[0])") // Ne pas dépasser 4 chiffres!!
                         .padding(.bottom)
-                    Text("🍰 Carbs : 25000")
+                    Text("🍰 Carbs : \(plat.contenu[1])")
                         .padding(.bottom)
-                    Text("🥩 Protein : 25000")
+                    Text("🥩 Protein : \(plat.contenu[2])")
                 }
                 .frame(width: 150, height: 150)
                 .padding()
                 .overlay(
                     RoundedRectangle(cornerRadius: 10).stroke(Color.accentColor, lineWidth: 0.75)
                 )
-                Text("Ceci est la description du plat, ce plat est connu pour être un plat, en tout cas ce plat n'est pas super interessant sachant")
+                Text(plat.description)
                 .frame(width: 150, height: 150)
                 .padding()
                 .overlay(
@@ -60,7 +67,7 @@ struct PlatAddOrderView: View {
 struct PlatAddOrderView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PlatAddOrderView()
+            PlatAddOrderView(plat: Plat.mockData[0])
         }
     }
 }

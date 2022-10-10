@@ -8,6 +8,7 @@
 import SwiftUI
 
 // ViewModel de Plat pour les utiliser dans les View
+// Les fonctions add, move, et delete seront utilisés pour gérer les commandes/order
 
 class PlatViewModel: ObservableObject {
     
@@ -21,8 +22,8 @@ class PlatViewModel: ObservableObject {
         plats.append(contentsOf: Plat.mockData)
     }
     
-    func addPlat(name: String, contenu: [Int], prix: Int) {
-        let newPlat = Plat(name: name, contenu: contenu, prix: prix)
+    func addPlat(name: String, contenu: [Int], description: String, prix: Float) {
+        let newPlat = Plat(name: name, contenu: contenu, description: description, prix: prix)
         plats.append(newPlat)
     }
     

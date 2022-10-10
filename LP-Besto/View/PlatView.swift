@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PlatView: View {
+    
+    let plat : Plat
+    
     var body: some View {
         
         HStack{
@@ -18,15 +21,26 @@ struct PlatView: View {
                 .frame(width: 64, height: 64)
                 .cornerRadius(10)
             VStack(alignment: .leading,spacing:5){
-                Text("Asian Flank Steak")
+                Text(plat.name)
                     .font(.system(size: 24,weight:.medium))
-                Text("8.99")
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                Text(" \(plat.prix, specifier: "%.2f")")
                     .font(.system(size: 16 ,weight:.bold))
                     .foregroundColor(Color(.systemGray))
             }
             .padding(.horizontal)
             
             Spacer()
+            
+            Button{
+                //action
+                
+            } label: {
+                //design
+                Text(">")
+                    .foregroundColor(Color(.systemGray2))
+            }
         }
         .padding(.vertical, 10)
         .font(.title2)
@@ -35,7 +49,7 @@ struct PlatView: View {
 
 struct PlatView_Previews: PreviewProvider {
     static var previews: some View {
-        PlatView()
+        PlatView(plat: Plat.mockData[0])
             .previewLayout(.sizeThatFits)
     }
 }
