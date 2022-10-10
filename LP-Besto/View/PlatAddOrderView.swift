@@ -25,6 +25,9 @@ struct PlatAddOrderView: View {
                 .frame(width: 250, height: 250)
             Text(plat.name)
                 .font(.title)
+            Text("\(plat.rating, specifier: "%.1f")⭐️")
+                .font(.system(size: 16 ,weight:.bold))
+                .foregroundColor(Color(.systemGray2))
             Spacer()
             HStack {
                 VStack {

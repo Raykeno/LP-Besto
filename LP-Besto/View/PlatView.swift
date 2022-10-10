@@ -22,12 +22,19 @@ struct PlatView: View {
                 .cornerRadius(10)
             VStack(alignment: .leading,spacing:5){
                 Text(plat.name)
-                    .font(.system(size: 24,weight:.medium))
+                    .font(.system(size: 20,weight:.medium))
                     .lineLimit(1)
                     .truncationMode(.tail)
-                Text(" \(plat.prix, specifier: "%.2f")")
-                    .font(.system(size: 16 ,weight:.bold))
-                    .foregroundColor(Color(.systemGray))
+                HStack{
+                    Text(" \(plat.prix, specifier: "%.2f")€")
+                        .font(.system(size: 16 ,weight:.bold))
+                        .foregroundColor(Color(.black))
+                    Spacer()
+                    Text("\(plat.rating, specifier: "%.1f")⭐️")
+                        .font(.system(size: 16 ,weight:.bold))
+                        .foregroundColor(Color(.systemGray2))
+                }
+
             }
             .padding(.horizontal)
             

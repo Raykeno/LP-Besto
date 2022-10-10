@@ -22,8 +22,8 @@ class PlatViewModel: ObservableObject {
         plats.append(contentsOf: Plat.mockData)
     }
     
-    func addPlat(name: String, contenu: [Int], description: String, prix: Float) {
-        let newPlat = Plat(name: name, contenu: contenu, description: description, prix: prix)
+    func addPlat(name: String, contenu: [Int], description: String, prix: Float, rating: Float) {
+        let newPlat = Plat(name: name, contenu: contenu, description: description, prix: prix,rating: rating)
         plats.append(newPlat)
     }
     
