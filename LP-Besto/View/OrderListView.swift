@@ -18,15 +18,27 @@ struct OrderListView: View {
                 ForEach(platVM.orders){
                     order in OrderPlatView(order: order)
                 }
+                .onDelete(perform: platVM.deleteOrder)
             }
             .navigationTitle("Orders")
             .listStyle(PlainListStyle())
+            .toolbar {
+                //make so that if order[] is empty, toolbar doesn't exist
+                ToolbarItem(placement: .navigationBarLeading){
+                    EditButton()
+                }
+            }
+            
+            
+            
         }
+        
     }
 }
 
 struct OrderListView_Previews: PreviewProvider {
     static var previews: some View {
+        
         OrderListView()
             .environmentObject(PlatViewModel())
     }

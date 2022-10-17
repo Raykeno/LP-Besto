@@ -33,6 +33,10 @@ class PlatViewModel: ObservableObject {
         plats.remove(atOffsets: indexSet)
     }
     
+    func deleteOrder(indexSet: IndexSet) {
+        orders.remove(atOffsets: indexSet)
+    }
+    
     func movePlat(from: IndexSet, to: Int) {
         plats.move(fromOffsets: from, toOffset: to)
     }
