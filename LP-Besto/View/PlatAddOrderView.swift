@@ -15,11 +15,12 @@ struct PlatAddOrderView: View {
     
     let plat : Plat
     
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var platVM : PlatViewModel
     
     var body: some View {
         VStack {
-            Image("Steak cuit au Vin Rouge")
+            Image(plat.name)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 250, height: 250)
@@ -52,7 +53,8 @@ struct PlatAddOrderView: View {
             }
             Spacer()
             Button {
-                
+                platVM.addOrder(name: plat.name, prix: plat.prix)
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Commander le Plat - \(plat.prix, specifier: "%.2f")€")
                     .frame(height: 48)

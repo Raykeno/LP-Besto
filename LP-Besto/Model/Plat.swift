@@ -25,3 +25,15 @@ struct Plat : Identifiable {
     ]
     
 }
+
+struct Order : Identifiable{
+    
+    var id = UUID()
+    var name : String
+    var prix : Float
+    
+    static var mockData = [
+        Order(name: "Steak cuit au Vin Rouge", prix: 9.99),
+    ]
+}
+
