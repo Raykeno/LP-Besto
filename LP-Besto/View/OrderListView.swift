@@ -13,26 +13,42 @@ struct OrderListView: View {
     
     var body: some View {
         NavigationView{
+            VStack{
+                List{
+                    ForEach(platVM.orders){
+                        order in OrderPlatView(order: order)
+                    }
+                    .onDelete(perform: platVM.deleteOrder)
+                }
+                .navigationTitle("Orders")
+                .listStyle(PlainListStyle())
+                .toolbar {
+                    //make so that if order[] is empty, toolbar doesn't exist
+                    ToolbarItem(placement: .navigationBarLeading){
+                        EditButton()
+                    }
+                }
+                Button{
+                    
+                } label: {
+                    //test - please change
+                    Text("Place order - 99€")
+                        .frame(height: 48)
+                        .frame(maxWidth: 180)
+                        .foregroundColor(.white)
+                        .background(Color.accentColor)
+                        .font(.headline)
+                        .cornerRadius(10)
+                }
+            }
             
-            List{
-                ForEach(platVM.orders){
-                    order in OrderPlatView(order: order)
-                }
-                .onDelete(perform: platVM.deleteOrder)
-            }
-            .navigationTitle("Orders")
-            .listStyle(PlainListStyle())
-            .toolbar {
-                //make so that if order[] is empty, toolbar doesn't exist
-                ToolbarItem(placement: .navigationBarLeading){
-                    EditButton()
-                }
-            }
+            
+
             
             
             
         }
-        
+                
     }
 }
 
