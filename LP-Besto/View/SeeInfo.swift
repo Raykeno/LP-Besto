@@ -31,7 +31,7 @@ struct SeeInfoView: View {
 
 
                 }
-            .navigationBarTitle("My info 🙋🏻", displayMode: .inline)
+            .navigationBarTitle("Welcome \(LocalStorage.myValueF) 🙋🏻", displayMode: .inline)
             }
             
             .onAppear(perform: {
