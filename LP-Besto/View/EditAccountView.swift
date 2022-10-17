@@ -23,23 +23,41 @@ struct EditAccountView: View {
             // create form
             Form{
                     TextField("Enter your first name", text: $firstName)
+                    .padding()
                     TextField("Enter your last name", text: $lastName)
+                    .padding()
+
                     TextField("Enter your email", text: $email)
+                    .padding()
+
                     
-                    Button("Update") {
-                        savedInfos = true
-                        LocalStorage.myValueF = self.firstName
-                        LocalStorage.myValueL = self.lastName
-                        LocalStorage.myValueE = self.email
-                        presentationMode.wrappedValue.dismiss()
-                    }
+                Button(action: {
+                    savedInfos = true
+                    LocalStorage.myValueF = self.firstName
+                    LocalStorage.myValueL = self.lastName
+                    LocalStorage.myValueE = self.email
+                    presentationMode.wrappedValue.dismiss()
+                    presentationMode.wrappedValue.dismiss()
+
+
+                }, label: {
+                    Text("Update")
+                })
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .frame(height: 55)
+                    .frame(maxWidth:.infinity)
+                    .background(Color.accentColor)
+                    .cornerRadius(10)
                     .disabled(firstName.isEmpty||lastName.isEmpty||email.isEmpty)
                     .alert("✅ Info successfully updated",
                         isPresented: $savedInfos) {
                       }
 
                 }
-            .navigationTitle("🖊 Update info")
+            .navigationBarTitle("✍🏻Update infos")
+            .navigationBarTitle("Update info", displayMode: .inline)
+            
                 
             }
             
