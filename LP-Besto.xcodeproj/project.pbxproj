@@ -17,6 +17,7 @@
 		7E0E35F428F45112003B7F46 /* OurTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E35F328F45112003B7F46 /* OurTabItemView.swift */; };
 		7E43C47228FD7EF400C277C3 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43C47128FD7EF400C277C3 /* LocalStorage.swift */; };
 		7E43C47428FD806300C277C3 /* EditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43C47328FD806300C277C3 /* EditAccountView.swift */; };
+		7E43C47628FD8E2500C277C3 /* SeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43C47528FD8E2400C277C3 /* SeeInfo.swift */; };
 		7E95CB4728EB2C0200F610E1 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95CB4628EB2C0200F610E1 /* AccountView.swift */; };
 		D45ACF0E28EB27A00000B939 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45ACF0D28EB27A00000B939 /* ListView.swift */; };
 		D45ACF1028EB27C00000B939 /* PlatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45ACF0F28EB27C00000B939 /* PlatView.swift */; };
@@ -34,6 +35,7 @@
 		7E0E35F328F45112003B7F46 /* OurTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurTabItemView.swift; sourceTree = "<group>"; };
 		7E43C47128FD7EF400C277C3 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		7E43C47328FD806300C277C3 /* EditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountView.swift; sourceTree = "<group>"; };
+		7E43C47528FD8E2400C277C3 /* SeeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeInfo.swift; sourceTree = "<group>"; };
 		7E95CB4628EB2C0200F610E1 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D45ACF0D28EB27A00000B939 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D45ACF0F28EB27C00000B939 /* PlatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				7E95CB4628EB2C0200F610E1 /* AccountView.swift */,
 				7E0E35F328F45112003B7F46 /* OurTabItemView.swift */,
 				7E43C47328FD806300C277C3 /* EditAccountView.swift */,
+				7E43C47528FD8E2400C277C3 /* SeeInfo.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				7E43C47228FD7EF400C277C3 /* LocalStorage.swift in Sources */,
 				724BEF6428EB1C960035CDEC /* PlatAddOrderView.swift in Sources */,
 				724BEF5528EB18A10035CDEC /* ContentView.swift in Sources */,
+				7E43C47628FD8E2500C277C3 /* SeeInfo.swift in Sources */,
 				D45ACF0E28EB27A00000B939 /* ListView.swift in Sources */,
 				724BEF6628EB1CA40035CDEC /* Plat.swift in Sources */,
 				7E95CB4728EB2C0200F610E1 /* AccountView.swift in Sources */,

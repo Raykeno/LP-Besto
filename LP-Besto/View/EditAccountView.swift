@@ -55,7 +55,6 @@ struct EditAccountView: View {
                       }
 
                 }
-            .navigationBarTitle("✍🏻Update infos")
             .navigationBarTitle("Update info", displayMode: .inline)
             
                 

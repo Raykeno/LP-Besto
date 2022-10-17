@@ -64,8 +64,11 @@ struct AccountView: View {
             }
             .navigationTitle("😎 Account")
             .navigationBarItems(
+                leading: NavigationLink(destination: SeeInfoView(), label: {
+                    Image(systemName: "eye.fill")
+                }),
                 trailing: NavigationLink(destination: EditAccountView(), label: {
-                Image(systemName: "eye.fill")
+                Image(systemName: "pencil.circle.fill")
             })
             )
             
