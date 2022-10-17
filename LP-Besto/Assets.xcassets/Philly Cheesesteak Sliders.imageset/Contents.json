@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "k-Photo-Recipes-2020-03-Easy-Philly-Cheesesteak-Sliders-2020-02_Easy-Philly-Cheesesteak-Sliders_318.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

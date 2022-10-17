@@ -14,7 +14,7 @@ struct PlatView: View {
     var body: some View {
         
         HStack{
-            Image("test")
+            Image(plat.name)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fill)

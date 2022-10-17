@@ -19,7 +19,7 @@ struct PlatAddOrderView: View {
     
     var body: some View {
         VStack {
-            Image("SteakTestExemple")
+            Image("Steak cuit au Vin Rouge")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 250, height: 250)
