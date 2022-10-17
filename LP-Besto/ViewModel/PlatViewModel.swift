@@ -13,6 +13,7 @@ import SwiftUI
 class PlatViewModel: ObservableObject {
     
     @Published var plats : [Plat] = []
+    @Published var orders : [Order] = []
     
     init() {
         // getMockPlats()
@@ -34,6 +35,11 @@ class PlatViewModel: ObservableObject {
     
     func movePlat(from: IndexSet, to: Int) {
         plats.move(fromOffsets: from, toOffset: to)
+    }
+    
+    func addOrder(name: String, prix: Float){
+        let newPlat = Order( name: name, prix: prix)
+        orders.append(newPlat)
     }
     
     func getPlats() {
