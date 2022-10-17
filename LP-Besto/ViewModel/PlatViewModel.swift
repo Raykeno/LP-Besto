@@ -34,6 +34,4 @@ class PlatViewModel: ObservableObject {
     func movePlat(from: IndexSet, to: Int) {
         plats.move(fromOffsets: from, toOffset: to)
     }
-    
-    
 }
