@@ -18,15 +18,19 @@ struct SeeInfoView: View {
         
         NavigationView{
             Form{
-                    TextField("", text: $firstName)
+                    
+                    Text("Your name : \(firstName)")
                     .padding()
-                    TextField("", text: $lastName)
+                    .foregroundColor(.brown)
+                    Text("Your surname : \(lastName)")
                     .padding()
-                    TextField("", text: $email)
+                    .foregroundColor(.brown)
+                    Text("Your email : \(email)")
                     .padding()
+                    .foregroundColor(.brown)
+
 
                 }
-
             .navigationBarTitle("My info 🙋🏻", displayMode: .inline)
             }
             
