@@ -18,7 +18,7 @@ struct AccountView: View {
     @State var birthDate = Date()
     @State var togExtra = false
     @State var togFrequent = false
-    @State private var savedInfos: Bool = false
+    @State var savedInfos: Bool = false
 
     
     var body: some View {
@@ -35,7 +35,7 @@ struct AccountView: View {
                         }
                     }
                            .pickerStyle(.segmented)
-                   // recup the  value
+
                     Text("Your gender  : \(selection)")
                     TextField("First Name", text: $firstName)
                     TextField("Last Name", text: $lastName)
@@ -43,11 +43,15 @@ struct AccountView: View {
                     DatePicker("Birthday", selection: $birthDate, displayedComponents: .date)
                     Button("Save changes") {
                         savedInfos = true
+                        LocalStorage.myValueF = self.firstName
+                        LocalStorage.myValueL = self.lastName
+                        LocalStorage.myValueE = self.email
                     }
                     .disabled(firstName.isEmpty||lastName.isEmpty||email.isEmpty)
                     .alert("✅ Info successfully saved",
                         isPresented: $savedInfos) {
                       }
+                    
 
 
                 }
@@ -59,6 +63,11 @@ struct AccountView: View {
     
             }
             .navigationTitle("😎 Account")
+            .navigationBarItems(
+                trailing: NavigationLink(destination: EditAccountView(), label: {
+                Image(systemName: "eye.fill")
+            })
+            )
             
         }
         

@@ -32,5 +32,6 @@ struct OurTabItemView: View {
 struct OurTabItemView_Previews: PreviewProvider {
     static var previews: some View {
         OurTabItemView()
+            .environmentObject(PlatViewModel())
     }
 }
