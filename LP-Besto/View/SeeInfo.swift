@@ -11,7 +11,7 @@ struct SeeInfoView: View {
     @State var firstName: String=""
     @State var lastName: String=""
     @State var email: String=""
-    @State var birthDate = Date()
+    @State var today = Date()
 
 
     
@@ -20,7 +20,9 @@ struct SeeInfoView: View {
         
         NavigationView{
             Form{
-                    
+                    Text("Today is \(today.formatted(date: .long, time: .omitted))")
+                    .padding()
+                    .foregroundColor(.gray)
                     Text("Your name : \(firstName)")
                     .padding()
                     .foregroundColor(.brown)
@@ -30,9 +32,7 @@ struct SeeInfoView: View {
                     Text("Your email : \(email)")
                     .padding()
                     .foregroundColor(.brown)
-                    Text("Bithday 🥳 : \(birthDate.formatted(date: .long, time: .omitted))")
-                    .padding()
-                    .foregroundColor(.brown)
+                    
 
 
 
