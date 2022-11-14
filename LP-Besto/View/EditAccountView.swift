@@ -12,6 +12,8 @@ struct EditAccountView: View {
     @State var firstName: String=""
     @State var lastName: String=""
     @State var email: String=""
+    @State var birthDate = Date()
+
     @State var savedInfos: Bool = false
     @Environment(\.presentationMode) var presentationMode
 
@@ -29,6 +31,7 @@ struct EditAccountView: View {
 
                     TextField("Enter your email", text: $email)
                     .padding()
+                    
 
                     
                 Button(action: {
@@ -64,6 +67,7 @@ struct EditAccountView: View {
                 self.firstName = LocalStorage.myValueF
                 self.lastName = LocalStorage.myValueL
                 self.email = LocalStorage.myValueE
+
 
             })
             

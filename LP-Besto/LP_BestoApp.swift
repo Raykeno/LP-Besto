@@ -11,8 +11,7 @@ import SwiftUI
 struct LP_BestoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(PlatViewModel())
+                AccountView()
         }
     }
 }

@@ -11,6 +11,8 @@ struct SeeInfoView: View {
     @State var firstName: String=""
     @State var lastName: String=""
     @State var email: String=""
+    @State var birthDate = Date()
+
 
     
     var body: some View {
@@ -28,10 +30,14 @@ struct SeeInfoView: View {
                     Text("Your email : \(email)")
                     .padding()
                     .foregroundColor(.brown)
+                    Text("Bithday 🥳 : \(birthDate.formatted(date: .long, time: .omitted))")
+                    .padding()
+                    .foregroundColor(.brown)
+
 
 
                 }
-            .navigationBarTitle("Welcome \(LocalStorage.myValueF) 🙋🏻", displayMode: .inline)
+            .navigationBarTitle("Welcome \(LocalStorage.myValueF) 👋🏼", displayMode: .inline)
             }
             
             .onAppear(perform: {

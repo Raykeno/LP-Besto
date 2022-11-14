@@ -35,6 +35,15 @@ class LocalStorage {
             return UserDefaults.standard.string(forKey: "email") ?? ""
         }
     }
+    
+    public static var myValueB: String {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "birth")
+        }
+        get {
+            return UserDefaults.standard.string(forKey: "birth") ?? ""
+        }
+    }
 
     
 }

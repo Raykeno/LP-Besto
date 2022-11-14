@@ -40,7 +40,10 @@ struct AccountView: View {
                     TextField("First Name", text: $firstName)
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
-                    DatePicker("Birthday", selection: $birthDate, displayedComponents: .date)
+                    DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
+                                   Text("Select your birthday")
+                    }
+                    
                     Button("Save changes") {
                         savedInfos = true
                         LocalStorage.myValueF = self.firstName
@@ -51,14 +54,22 @@ struct AccountView: View {
                     .alert("✅ Info successfully saved",
                         isPresented: $savedInfos) {
                       }
-                    
-
 
                 }
-                
+            
                 Section(header: Text("REQUEST")){
                     Toggle("Extra Napkins", isOn: $togExtra)
-                    Toggle("Frequent Reffils", isOn: $togFrequent)
+                    if(togExtra){
+                        Text("Extra")
+                            .padding()
+                            .foregroundColor(.gray)
+                    }
+                    Toggle("Frequent Refills", isOn: $togFrequent)
+                    if(togFrequent){
+                        Text("Frequent")
+                            .padding()
+                            .foregroundColor(.gray)
+                    }
                 }
     
             }
