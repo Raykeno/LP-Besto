@@ -60,13 +60,25 @@ struct AccountView: View {
                 Section(header: Text("REQUEST")){
                     Toggle("Extra Napkins", isOn: $togExtra)
                     if(togExtra){
-                        Text("Extra")
+                        Text("Chicken")
+                            .padding()
+                            .foregroundColor(.gray)
+                        Text("Fish")
+                            .padding()
+                            .foregroundColor(.gray)
+                        Text("Apple")
                             .padding()
                             .foregroundColor(.gray)
                     }
                     Toggle("Frequent Refills", isOn: $togFrequent)
                     if(togFrequent){
-                        Text("Frequent")
+                        Text("Chicken Wings")
+                            .padding()
+                            .foregroundColor(.gray)
+                        Text("Chicken Fingers")
+                            .padding()
+                            .foregroundColor(.gray)
+                        Text("Chicken Dumplings")
                             .padding()
                             .foregroundColor(.gray)
                     }
