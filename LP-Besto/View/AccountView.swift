@@ -19,6 +19,8 @@ struct AccountView: View {
     @State var togExtra = false
     @State var togFrequent = false
     @State var savedInfos: Bool = false
+    @Environment(\.presentationMode) var presentationMode
+
 
     
     var body: some View {
@@ -87,12 +89,9 @@ struct AccountView: View {
             }
             .navigationTitle("😎 Account")
             .navigationBarItems(
-                leading: NavigationLink(destination: SeeInfoView(), label: {
+                trailing: NavigationLink(destination: SeeInfoView(), label: {
                     Image(systemName: "eye.fill")
-                }),
-                trailing: NavigationLink(destination: EditAccountView(), label: {
-                Image(systemName: "pencil.circle.fill")
-            })
+                })
             )
             
         }
