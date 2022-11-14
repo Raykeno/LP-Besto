@@ -46,6 +46,14 @@ class PlatViewModel: ObservableObject {
         orders.append(newPlat)
     }
     
+    func getTotal()-> Double{
+        var result = 0.0
+        for order in orders {
+            result += Double(order.prix)
+        }
+        return result
+    }
+    
     func getPlats() {
         if let url = Bundle.main.url(forResource: "data", withExtension: "json") {
             do {

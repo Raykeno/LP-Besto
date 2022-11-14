@@ -10,42 +10,52 @@ import SwiftUI
 struct OrderListView: View {
     
     @EnvironmentObject var platVM: PlatViewModel
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationView{
             VStack{
-                List{
-                    ForEach(platVM.orders){
-                        order in OrderPlatView(order: order)
+                if platVM.orders.isEmpty {
+                    Text("Please order!")
+                        .padding(.bottom,100)
+                }else{
+                    List{
+                        ForEach(platVM.orders){
+                            order in OrderPlatView(order: order)
+                        }
+                        .onDelete(perform: platVM.deleteOrder)
                     }
-                    .onDelete(perform: platVM.deleteOrder)
-                }
-                .navigationTitle("Orders")
-                .listStyle(PlainListStyle())
-                .toolbar {
-                    //make so that if order[] is empty, toolbar doesn't exist
-                    ToolbarItem(placement: .navigationBarLeading){
-                        EditButton()
+                    .navigationTitle("Orders")
+                    .listStyle(PlainListStyle())
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading){
+                            EditButton()
+                        }
                     }
-                }
-                Button{
-                    
-                } label: {
-                    //test - please change
-                    Text("Place order - 99€")
-                        .frame(height: 48)
-                        .frame(maxWidth: 180)
-                        .foregroundColor(.white)
-                        .background(Color.accentColor)
-                        .font(.headline)
-                        .cornerRadius(10)
+                    Button{
+                        platVM.orders.removeAll()
+                        showingAlert = true
+                        
+                    } label: {
+                        Text("Place order - \(platVM.getTotal(), specifier: "%.2f")€")
+                            .frame(height: 48)
+                            .frame(maxWidth: 180)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .font(.headline)
+                            .cornerRadius(10)
+                    }
                 }
             }
-            
-            
-
-            
-            
+            .alert(isPresented: $showingAlert) {
+                            Alert(title: Text("Your order is complete"),
+                                  dismissButton: Alert.Button.default(
+                                    Text("Back to menu"), action: {
+                                        
+                                    }
+                                  )
+                            )
+            }
             
         }
                 

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OurTabItemView: View {
+    @State private var selectedTab = "One"
+    
     var body: some View {
              TabView{
                  ListView()
@@ -20,7 +22,6 @@ struct OurTabItemView: View {
                          Image(systemName: "person")
                          Text("Account")
                      }
-                 //make so that if order[] is empty, orderlistview shows "please choose a meal"
                  OrderListView()
                      .tabItem {
                          Image(systemName: "bag")
