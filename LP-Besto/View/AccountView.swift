@@ -42,6 +42,8 @@ struct AccountView: View {
                     TextField("First Name", text: $firstName)
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
+                        .autocapitalization(.none)
+
                     DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
                                    Text("Select your birthday")
                     }

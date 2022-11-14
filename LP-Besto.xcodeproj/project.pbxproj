@@ -103,8 +103,8 @@
 				D41ED6CC28FD9586007957DD /* OrderListView.swift */,
 				D41ED6CE28FD95A7007957DD /* OrderPlatView.swift */,
 				7E95CB4628EB2C0200F610E1 /* AccountView.swift */,
-				7E0E35F328F45112003B7F46 /* OurTabItemView.swift */,
 				7E43C47528FD8E2400C277C3 /* SeeInfo.swift */,
+				7E0E35F328F45112003B7F46 /* OurTabItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
