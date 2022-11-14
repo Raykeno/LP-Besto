@@ -20,15 +20,37 @@ struct PlatAddOrderView: View {
     
     var body: some View {
         VStack {
-            Image(plat.name)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 250, height: 250)
+            ZStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.accentColor)
+                    .frame(height: 350)
+                    .ignoresSafeArea()
+                    
+                Image("Steak cuit au Vin Rouge")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 256, height: 256)
+                    .padding(.bottom, 50)
+                    
+            }
+            
+            
             Text(plat.name)
                 .font(.title)
-            Text("\(plat.rating, specifier: "%.1f")⭐️")
-                .font(.system(size: 16 ,weight:.bold))
-                .foregroundColor(Color(.systemGray2))
+            HStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.accentColor)
+                    .frame(width: 70, height: 30)
+                    .padding(4)
+                    .overlay(
+                        Text("\(plat.rating, specifier: "%.1f") ⭐️")
+                            .font(.system(size: 16 ,weight:.bold))
+                            .foregroundColor(Color.black)
+                    )
+                Text(" \(plat.prix)" + " €")
+                    .font(.system(size: 26))
+                    .bold()
+                }
             Spacer()
             HStack {
                 VStack {
@@ -38,18 +60,13 @@ struct PlatAddOrderView: View {
                         .padding(.bottom)
                     Text("🥩 Protein : \(plat.contenu[2])")
                 }
-                .frame(width: 150, height: 150)
+                .frame(width: 160, height: 160)
                 .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10).stroke(Color.accentColor, lineWidth: 0.75)
-                )
-                Text(plat.description)
-                .frame(width: 150, height: 150)
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10).stroke(Color.accentColor, lineWidth: 0.75)
-                )
-                
+
+                Text(" \" " + plat.description + " \" ")
+                    .italic()
+                    .frame(width: 160, height: 160)
+                    .padding()
             }
             Spacer()
             Button {
