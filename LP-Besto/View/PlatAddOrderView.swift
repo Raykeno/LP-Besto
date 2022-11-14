@@ -19,76 +19,110 @@ struct PlatAddOrderView: View {
     @EnvironmentObject var platVM : PlatViewModel
     
     var body: some View {
-        VStack {
-            ZStack{
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.accentColor)
-                    .frame(height: 350)
-                    .ignoresSafeArea()
-                    
-                Image("Steak cuit au Vin Rouge")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 256, height: 256)
-                    .padding(.bottom, 50)
-                    
-            }
-            
-            
-            Text(plat.name)
-                .font(.title)
-            HStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.accentColor)
-                    .frame(width: 70, height: 30)
-                    .padding(4)
-                    .overlay(
-                        Text("\(plat.rating, specifier: "%.1f") ⭐️")
-                            .font(.system(size: 16 ,weight:.bold))
-                            .foregroundColor(Color.black)
-                    )
-                Text(" \(plat.prix)" + " €")
-                    .font(.system(size: 26))
-                    .bold()
+        NavigationView {
+            VStack {
+                ZStack{
+                    /*
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.accentColor)
+                        .ignoresSafeArea()
+                        .shadow(color: .black, radius: 4, x: 1, y: 1)
+                        .frame(minWidth: 0,
+                               maxWidth: .infinity,
+                               minHeight: 0,
+                               maxHeight: 100,
+                               alignment: .top)
+                     */
+                        
+                    Image(plat.name)
+                        .resizable()
+                        .frame(width: 256, height: 256)
+                        .clipShape(RoundedRectangle(cornerRadius: 30))
+                        .shadow(color: .black, radius: 2, x: 0, y: 0)
                 }
-            Spacer()
-            HStack {
-                VStack {
-                    Text("⚡️ Calories : \(plat.contenu[0])") // Ne pas dépasser 4 chiffres!!
-                        .padding(.bottom)
-                    Text("🍰 Carbs : \(plat.contenu[1])")
-                        .padding(.bottom)
-                    Text("🥩 Protein : \(plat.contenu[2])")
-                }
-                .frame(width: 160, height: 160)
-                .padding()
+                
+                Spacer()
+                
+                Text(plat.name)
+                    .font(.title)
 
-                Text(" \" " + plat.description + " \" ")
-                    .italic()
+                HStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.accentColor)
+                        .frame(width: 70, height: 30)
+                        .padding(4)
+                        .shadow(color: .black, radius: 2, x: 0, y: 0)
+                        .overlay(
+                            Text("\(plat.rating, specifier: "%.1f") ⭐️")
+                                .font(.system(size: 16 ,weight:.bold))
+                                .foregroundColor(Color.black)
+                        )
+                    Text(" \(plat.prix)" + " €")
+                        .font(.system(size: 26))
+                        .bold()
+                    }
+                Spacer()
+                HStack {
+                    VStack {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.orange)
+                                .shadow(color: .black, radius: 2, x: 1, y: 1)
+                                .frame(width: 200, height: 30)
+                            Text("⚡️ Calories : \(plat.contenu[0])") // Ne pas dépasser 4 chiffres!!
+                        }
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.yellow)
+                                .shadow(color: .black, radius: 2, x: 1, y: 1)
+                                .frame(width: 200, height: 30)
+                            Text("🍰 Carbs : \(plat.contenu[1])")
+                        }
+                            
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.red)
+                                .shadow(color: .black, radius: 2, x: 1, y: 1)
+                                .frame(width: 200, height: 30)
+                        Text("🥩 Protein : \(plat.contenu[2])")
+                        }
+                    }
                     .frame(width: 160, height: 160)
                     .padding()
+
+                    Text(" \" " + plat.description + " \" ")
+                        .italic()
+                        .frame(width: 160, height: 160)
+                        .padding()
+                }
+                
+                Button {
+                    platVM.addOrder(name: plat.name, prix: plat.prix)
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("Commander le Plat - \(plat.prix, specifier: "%.2f")€")
+                        .frame(height: 48)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Color.accentColor)
+                        .font(.headline)
+                        .cornerRadius(10)
+                        .shadow(color: .black, radius: 2, x: 0, y: 0)
+                        
+                }.padding(.bottom, 100)
+                Spacer()
             }
-            Spacer()
-            Button {
-                platVM.addOrder(name: plat.name, prix: plat.prix)
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Text("Commander le Plat - \(plat.prix, specifier: "%.2f")€")
-                    .frame(height: 48)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .background(Color.accentColor)
-                    .font(.headline)
-                    .cornerRadius(10)
-            }.padding()
-        }
-        .navigationTitle(" 🫕 Commande du Plat")
+            
+            
+        }.navigationBarTitle(" 🫕 Commande du Plat")
     }
 }
 
 struct PlatAddOrderView_Previews: PreviewProvider {
     static var previews: some View {
-        PlatAddOrderView(plat: Plat.mockData[0])
-            .environmentObject(PlatViewModel())
+        NavigationView {
+            PlatAddOrderView(plat: Plat.mockData[0])
+                .environmentObject(PlatViewModel())
+        }
     }
 }
