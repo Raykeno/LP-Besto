@@ -8,26 +8,45 @@
 import SwiftUI
 
 struct OurTabItemView: View {
-    @State private var selectedTab = "One"
+    @State private var selectedTab = "Home"
     
     var body: some View {
-             TabView{
-                 ListView()
-                     .tabItem {
-                         Image(systemName: "homekit")
-                         Text("Home")
-                     }
-                 AccountView()
-                     .tabItem {
-                         Image(systemName: "person")
-                         Text("Account")
-                     }
-                 OrderListView()
-                     .tabItem {
-                         Image(systemName: "bag")
-                         Text("Order")
-                     }
-             }
+             //TabView{
+                // ListView()
+                     //.tabItem {
+                       //  Image(systemName: "homekit")
+                     //    Text("Home")
+                   //  }
+                 //AccountView()
+                  //   .tabItem {
+                       //  Image(systemName: "person")
+                     //  }
+                 //OrderListView()
+                     //.tabItem {
+                   //      Image(systemName: "bag")
+                 //        Text("Order")
+               //      }
+             //}
+        TabView(selection: $selectedTab) {
+                    ListView()
+                        .tabItem {
+                            Label("Home", systemImage: "homekit")
+                        }
+                        .tag("Home")
+
+                    AccountView()
+                        .tabItem {
+                            Label("Account", systemImage: "person")
+                        }
+                        .tag("Account")
+            
+                    OrderListView(selectedTab: $selectedTab)
+                        .tabItem {
+                            Label("Order", systemImage: "bag")
+                        }
+                        .tag("Order")
+                }
+
     }
 }
 

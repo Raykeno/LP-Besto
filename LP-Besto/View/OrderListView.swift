@@ -11,6 +11,7 @@ struct OrderListView: View {
     
     @EnvironmentObject var platVM: PlatViewModel
     @State private var showingAlert = false
+    @Binding var selectedTab: String
     
     var body: some View {
         NavigationView{
@@ -51,7 +52,7 @@ struct OrderListView: View {
                             Alert(title: Text("Your order is complete"),
                                   dismissButton: Alert.Button.default(
                                     Text("Back to menu"), action: {
-                                        
+                                        selectedTab = "Home"
                                     }
                                   )
                             )
@@ -62,10 +63,10 @@ struct OrderListView: View {
     }
 }
 
-struct OrderListView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        OrderListView()
-            .environmentObject(PlatViewModel())
-    }
-}
+//struct OrderListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        
+//        OrderListView()
+//            .environmentObject(PlatViewModel())
+//    }
+//}
