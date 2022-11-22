@@ -43,7 +43,6 @@ struct AccountView: View {
                     TextField("Last Name", text: $lastName)
                     TextField("Email", text: $email)
                         .autocapitalization(.none)
-
                     DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
                                    Text("Select your birthday")
                     }
@@ -63,7 +62,7 @@ struct AccountView: View {
             
                 Section(header: Text("REQUEST")){
                     Toggle("Extra Napkins", isOn: $togExtra)
-                    if(togExtra){
+                   /* if(togExtra){
                         Text("Chicken")
                             .padding()
                             .foregroundColor(.gray)
@@ -73,9 +72,9 @@ struct AccountView: View {
                         Text("Apple")
                             .padding()
                             .foregroundColor(.gray)
-                    }
+                    }*/
                     Toggle("Frequent Refills", isOn: $togFrequent)
-                    if(togFrequent){
+                    /* if(togFrequent){
                         Text("Chicken Wings")
                             .padding()
                             .foregroundColor(.gray)
@@ -85,7 +84,7 @@ struct AccountView: View {
                         Text("Chicken Dumplings")
                             .padding()
                             .foregroundColor(.gray)
-                    }
+                    }*/
                 }
     
             }
