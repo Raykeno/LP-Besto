@@ -113,7 +113,7 @@ struct PlatAddOrderView: View {
                     platVM.addOrder(name: plat.name, prix: plat.prix)
                     presentationMode.wrappedValue.dismiss()
                 } label: {
-                    Text("Commander el Plat - \(plat.prix, specifier: "%.2f")€")
+                    Text("Commander le Plat - \(plat.prix, specifier: "%.2f")€")
                         .frame(height: 48)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
