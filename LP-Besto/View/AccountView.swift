@@ -20,9 +20,10 @@ struct AccountView: View {
     @State var togFrequent = false
     @State var savedInfos: Bool = false
     @Environment(\.presentationMode) var presentationMode
-
-
-    
+   
+    var disableForm: Bool {
+        firstName.count < 2 || lastName.count < 2 || email.count < 3
+    }
     var body: some View {
         
         NavigationView{
@@ -39,25 +40,31 @@ struct AccountView: View {
                            .pickerStyle(.segmented)
 
                     Text("Your gender  : \(selection)")
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email", text: $email)
+                    HStack { Image(systemName: "person") .foregroundColor(.gray).font(.headline)
+                        TextField("First Name", text: $firstName)}
+                    HStack { Image(systemName: "person") .foregroundColor(.gray).font(.headline)
+                        TextField("Last Name", text: $lastName)}
+                    HStack { Image(systemName: "envelope") .foregroundColor(.gray).font(.headline)
+                        TextField("Email", text: $email)}
                         .autocapitalization(.none)
                     DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
                                    Text("Select your birthday")
                     }
                     
+
+                }
+                
+                Section{
                     Button("Save changes") {
                         savedInfos = true
                         LocalStorage.myValueF = self.firstName
                         LocalStorage.myValueL = self.lastName
                         LocalStorage.myValueE = self.email
                     }
-                    .disabled(firstName.isEmpty||lastName.isEmpty||email.isEmpty)
+                    .disabled(disableForm)
                     .alert("✅ Info successfully saved",
                         isPresented: $savedInfos) {
                       }
-
                 }
             
                 Section(header: Text("REQUEST")){
@@ -99,7 +106,6 @@ struct AccountView: View {
         
         
     }
-    
     
 }
 
