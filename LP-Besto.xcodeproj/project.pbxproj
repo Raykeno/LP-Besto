@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7245281A292D07B7007CB581 /* AddPlatToPlats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72452819292D07B7007CB581 /* AddPlatToPlats.swift */; };
-		7245281C292D0A80007CB581 /* View in Resources */ = {isa = PBXBuildFile; fileRef = 7245281B292D0A80007CB581 /* View */; };
 		724BEF5328EB18A10035CDEC /* LP_BestoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF5228EB18A10035CDEC /* LP_BestoApp.swift */; };
 		724BEF5528EB18A10035CDEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BEF5428EB18A10035CDEC /* ContentView.swift */; };
 		724BEF5728EB18A20035CDEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 724BEF5628EB18A20035CDEC /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		72452819292D07B7007CB581 /* AddPlatToPlats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlatToPlats.swift; sourceTree = "<group>"; };
-		7245281B292D0A80007CB581 /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; name = View; sourceTree = "<group>"; };
 		724BEF4F28EB18A10035CDEC /* LP-Besto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LP-Besto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		724BEF5228EB18A10035CDEC /* LP_BestoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LP_BestoApp.swift; sourceTree = "<group>"; };
 		724BEF5428EB18A10035CDEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				7E43C47528FD8E2400C277C3 /* SeeInfo.swift */,
 				7E0E35F328F45112003B7F46 /* OurTabItemView.swift */,
 				72452819292D07B7007CB581 /* AddPlatToPlats.swift */,
-				7245281B292D0A80007CB581 /* View */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 				72B1DB1428FD94DE00C04F44 /* data.json in Resources */,
 				724BEF5A28EB18A20035CDEC /* Preview Assets.xcassets in Resources */,
 				724BEF5728EB18A20035CDEC /* Assets.xcassets in Resources */,
-				7245281C292D0A80007CB581 /* View in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

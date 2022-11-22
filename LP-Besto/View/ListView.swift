@@ -27,11 +27,21 @@ struct ListView: View {
                     NavigationLink(destination: PlatAddOrderView(plat:plat)){
                         PlatView(plat:plat)
                     }
-                    
                 }
+                .onDelete(perform: platVM.deletePlat)
             }
             .navigationTitle("🍟 Appetizers")
             .listStyle(PlainListStyle())
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing){
+                    NavigationLink("Add"){
+                        AddPlatToPlats()
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading){
+                        EditButton()
+                }
+            }
         }
     }
 }
