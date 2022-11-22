@@ -18,7 +18,10 @@ struct PlatAddOrderView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var platVM : PlatViewModel
     
+    
+    
     var body: some View {
+        
         NavigationView {
             VStack {
                 ZStack{
@@ -47,16 +50,26 @@ struct PlatAddOrderView: View {
                     .font(.title)
 
                 HStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.accentColor)
-                        .frame(width: 70, height: 30)
-                        .padding(4)
-                        .shadow(color: .black, radius: 2, x: 0, y: 0)
-                        .overlay(
-                            Text("\(plat.rating, specifier: "%.1f") ⭐️")
-                                .font(.system(size: 16 ,weight:.bold))
-                                .foregroundColor(Color.black)
-                        )
+                    ZStack(alignment: .leading){
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.gray)
+                            .frame(width: 70, height: 30)
+                            .padding(4)
+                            .shadow(color: .black, radius: 2, x: 0, y: 0)
+
+                    
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color.accentColor)
+                            .frame(width: platVM.ratingGetProgress(rating: plat.rating), height: 30)
+                            .padding(4)
+                            
+                        
+                        Text("\(plat.rating, specifier: "%.1f") ⭐️")
+                            .font(.system(size: 16 ,weight:.bold))
+                            .foregroundColor(Color.white)
+                            .offset(x:16)
+                    }
+                    
                     Text(" \(plat.prix)" + " €")
                         .font(.system(size: 26))
                         .bold()
@@ -121,7 +134,7 @@ struct PlatAddOrderView: View {
 struct PlatAddOrderView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PlatAddOrderView(plat: Plat.mockData[0])
+            PlatAddOrderView(plat: Plat.mockData[2])
                 .environmentObject(PlatViewModel())
         }
     }

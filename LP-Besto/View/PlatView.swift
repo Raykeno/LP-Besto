@@ -30,7 +30,7 @@ struct PlatView: View {
                         .font(.system(size: 16 ,weight:.bold))
                         .foregroundColor(Color(.black))
                     Spacer()
-                    Text("\(plat.rating, specifier: "%.1f")⭐️")
+                    Text("\(plat.rating, specifier: "%.1f") ⭐️")
                         .font(.system(size: 16 ,weight:.bold))
                         .foregroundColor(Color(.systemGray2))
                 }

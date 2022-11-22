@@ -49,7 +49,7 @@ struct OrderListView: View {
                 }
             }
             .alert(isPresented: $showingAlert) {
-                            Alert(title: Text("Your order is complete"),
+                            Alert(title: Text("Your order is complete ✅"),
                                   dismissButton: Alert.Button.default(
                                     Text("Back to menu"), action: {
                                         selectedTab = "Home"

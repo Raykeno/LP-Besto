@@ -46,6 +46,14 @@ class PlatViewModel: ObservableObject {
         orders.append(newPlat)
     }
     
+    func ratingGetProgress(rating: Float)-> CGFloat {
+        var ratingProgress: Float = rating/5.0
+        if (ratingProgress > 1.0){
+            ratingProgress = 1.0
+        }
+        return CGFloat(ceilf(70.0*ratingProgress));
+    }
+    
     func getTotal()-> Double{
         var result = 0.0
         for order in orders {
@@ -67,6 +75,7 @@ class PlatViewModel: ObservableObject {
                             let proteinsDictionary = (tab as! [NSString:NSNumber])["protein"]
                             let carbsDictionary = (tab as! [NSString:NSNumber])["carbs"]
                             let priceDictionary = (tab as! [NSString:NSNumber])["price"]
+                            let ratingDictionary = (tab as! [NSString:NSNumber])["rating"]
                             
                             let nameDictionary = (tab as! [NSString:NSString])["name"]
                             let descriptionDictionary = (tab as! [NSString:NSString])["description"]
@@ -81,8 +90,9 @@ class PlatViewModel: ObservableObject {
                             let myCalories: Int = caloriesDictionary!.intValue
                             let myCarbs: Int = carbsDictionary!.intValue
                             let myProteins: Int = proteinsDictionary!.intValue
+                            let myRating: Float = ratingDictionary!.floatValue
                             
-                            plats.append(Plat(name: myName, contenu: [myCalories, myCarbs, myProteins], description: myDescription, prix: myPrice, rating: 1.0))
+                            plats.append(Plat(name: myName, contenu: [myCalories, myCarbs, myProteins], description: myDescription, prix: myPrice, rating: myRating))
                         }
                         
                         }

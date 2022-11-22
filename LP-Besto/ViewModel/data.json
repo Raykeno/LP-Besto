@@ -8,7 +8,8 @@
             "name": "Asian Flank Steak",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/asian-flank-steak.jpeg",
             "calories": 300,
-            "carbs": 0
+            "carbs": 0,
+            "rating": 4.7
         },
         {
             "price": 6.99,
@@ -18,7 +19,8 @@
             "name": "Blackened Shrimp",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/blackened-shrimp.jpeg",
             "calories": 450,
-            "carbs": 3
+            "carbs": 3,
+            "rating": 3.2
         },
         {
             "price": 7.49,
@@ -28,7 +30,8 @@
             "name": "Buffalo Chicken Bites",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/buffalo-chicken-bites.jpeg",
             "calories": 800,
-            "carbs": 22
+            "carbs": 22,
+            "rating": 4.1
         },
         {
             "carbs": 19,
@@ -38,7 +41,8 @@
             "name": "Chicken Avocado Spring Roll",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/chicken-avocado-spring-roll.jpeg",
             "calories": 480,
-            "protein": 7
+            "protein": 7,
+            "rating": 3.7
         },
         {
             "protein": 4,
@@ -48,7 +52,8 @@
             "name": "Chicken Dumplings",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/chicken-dumplings.jpeg",
             "calories": 580,
-            "carbs": 14
+            "carbs": 14,
+            "rating": 2.8
         },
         {
             "price": 9.99,
@@ -58,7 +63,8 @@
             "name": "Chicken Fingers",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/chicken-fingers.jpeg",
             "calories": 675,
-            "protein": 9
+            "protein": 9,
+            "rating": 4.9
         },
         {
             "protein": 13,
@@ -68,7 +74,8 @@
             "name": "Chicken Wings",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/chicken-wings.jpeg",
             "calories": 700,
-            "carbs": 11
+            "carbs": 11,
+            "rating": 3.6
         },
         {
             "price": 8.29,
@@ -78,7 +85,8 @@
             "name": "Fried Cheese Ravioli",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/fried-cheese-ravioli.jpeg",
             "calories": 415,
-            "carbs": 29
+            "carbs": 29,
+            "rating": 2.6
         },
         {
             "price": 13.99,
@@ -88,7 +96,8 @@
             "name": "Jumbo Tater Tots",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/jumbo-tater-tot.jpeg",
             "calories": 625,
-            "carbs": 40
+            "carbs": 40,
+            "rating": 4.3
         },
         {
             "price": 12.99,
@@ -98,7 +107,8 @@
             "name": "Meatballs",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/meatballs.jpeg",
             "calories": 500,
-            "protein": 33
+            "protein": 33,
+            "rating": 3.9
         },
         {
             "price": 6.99,
@@ -108,7 +118,8 @@
             "name": "Mozzarella Sticks",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/mozzarella-sticks.jpeg",
             "calories": 930,
-            "carbs": 32
+            "carbs": 32,
+            "rating": 2.6
         },
         {
             "price": 10.99,
@@ -118,7 +129,8 @@
             "name": "Philly Cheesesteak Sliders",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/philly-cheesesteak-sliders.jpeg",
             "calories": 725,
-            "protein": 28
+            "protein": 28,
+            "rating": 4.5
         },
         {
             "protein": 2,
@@ -128,7 +140,8 @@
             "name": "Rainbow Spring Rolls",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/rainbow-spring-rolls.jpeg",
             "calories": 270,
-            "carbs": 4
+            "carbs": 4,
+            "rating": 3.9
         },
         {
             "price": 12.49,
@@ -138,7 +151,8 @@
             "name": "Stuffed Shells",
             "imageURL": "file:///Users/davidlaiymani/Library/Mobile%20Documents/com~apple~CloudDocs/Enseignement/iOS/LP/Appetizer/Photos/stuff-shells.jpeg",
             "calories": 850,
-            "protein": 4
+            "protein": 4,
+            "rating": 2.9
         }
     ]
 }
